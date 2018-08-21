@@ -12,8 +12,14 @@ end
 
 get '/game/:option2' do
   game =
-  Game.new(params[:option2])
-  # @option1 = @computer.make_choice
+  Game.new("paper", params[:option2])
   @result = game.play_game()
   erb(:result)
 end
+
+# put '/game/:option2' do
+#   game =
+#   Game.new(params[:option1], params[:option2])
+#   @result = game.play_game()
+#   erb(:result)
+# end
