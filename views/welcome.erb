@@ -12,35 +12,21 @@ alt="Rock beats scissors, scissors beats paper, paper beats rock"
 
   <div class="button">
     <form action="/game/rock" method="get">
-      <input type="hidden" name=":option1" value="Rock">
+      <input type="hidden" >
       <input type="submit" value="Rock">
     </form>
   </div>
 
   <div class="button">
-    <form action="/game/paper" method="post">
-      <input type="hidden" name=":option1" value="Paper">
+    <form action="/game/paper" method="get">
+      <input type="hidden">
       <input type="submit" value="Paper">
     </form>
   </div>
 
   <div class="button">
-    <form action="/game/scissors" method="post">
-      <input type="hidden" name=":option1" value="Scissors">
+    <form action="/game/scissors" method="get">
+      <input type="hidden">
       <input type="submit" value="Scissors">
     </form>
   </div>
-
-
-<p> Player Two - Please pick your tool:<br>
-
-  <div class="button">
-    <form action="/game/:option1/rock" method="get">
-      <input type="hidden" name="option2" value="Rock">
-      <input type="submit" value="Rock">
-    </form>
-  </div>
-
-
-<button type = "button">Paper </button> <br>
-<button type = "button"> Scissors </button><br> </p>
