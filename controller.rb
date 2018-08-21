@@ -11,13 +11,29 @@ end
 
 get '/game/:option1/:option2' do
   game =
-  Game.new(params[:option1],
+  Game.new( @option1,
   params[:option2])
   @result = game.play_game()
   erb(:result)
 end
 
-post '/playeronechoice' do
-    button.save_player1_choice(params[:option1])
-    redirect '/'
+get '/game/rock' do
+  erb(:welcome)
+end
+
+post '/game/rock' do
+  @option1 = "rock"
+  redirect 'game/rock'
+end
+
+get '/game/scissors' do
+  erb(:welcome)
+end
+
+post '/game/scissors' do
+  @option1 = "scissors"
+  redirect 'game/scissors'
+end
+
+get '/game/paper' do
 end

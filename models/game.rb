@@ -1,9 +1,9 @@
 class Game
 
-  attr_accessor :option1, :option2
+  attr_accessor :player, :option2
 
-  def initialize(option1, option2)
-    @option1 = option1
+  def initialize(player, option2)
+    @option1 = player
     @option2 = option2
   end
 
@@ -24,8 +24,5 @@ class Game
     end
   end
 
-  def save_player1_choice(choice)
-    @option1 = choice
-  end
 
 end
