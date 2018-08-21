@@ -16,3 +16,8 @@ get '/game/:option1/:option2' do
   @result = game.play_game()
   erb(:result)
 end
+
+post '/playeronechoice' do
+    button.save_player1_choice(params[:option1])
+    redirect '/'
+end

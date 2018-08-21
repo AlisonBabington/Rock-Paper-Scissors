@@ -24,4 +24,8 @@ class Game
     end
   end
 
+  def save_player1_choice(choice)
+    @option1 = choice
+  end
+
 end
