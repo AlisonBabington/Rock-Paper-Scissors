@@ -3,7 +3,6 @@ require('sinatra/contrib/all')
 require('pry-byebug')
 
 require_relative('./models/game')
-require_relative('./models/computer')
 also_reload('./models/*')
 
 get '/game' do

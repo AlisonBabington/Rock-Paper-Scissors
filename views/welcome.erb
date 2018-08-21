@@ -9,25 +9,21 @@ alt="Rock beats scissors, scissors beats paper, paper beats rock"
 >
 </div>
 <p> Player One - Please pick your tool:<br>
+<div>
 
-  <div class="button">
-    <form action="/game/rock" method="get">
-      <input type="hidden" >
-      <input type="submit" value="Rock">
-    </form>
-  </div>
+  <form>
+    <input class="MyButton" type="button" value="Rock"
+    onclick="window.location.href='/game/rock'" />
+  </form>
 
+  <form>
+    <input class="MyButton" type="button" value="Paper"
+    onclick="window.location.href='/game/rock'" />
+  </form>
 
-  <div class="button">
-    <form action="/game/paper" method="get">
-      <input type="hidden">
-      <input type="submit" value="Paper">
-    </form>
-  </div>
+  <form>
+    <input class="MyButton" type="button" value="Scissors"
+    onclick="window.location.href='/game/scissors'" />
+  </form>
 
-  <div class="button">
-    <form action="/game/scissors" method="get">
-      <input type="hidden">
-      <input type="submit" value="Scissors">
-    </form>
-  </div>
+</div>
