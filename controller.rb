@@ -11,7 +11,7 @@ end
 
 get '/game/:option2' do
   game =
-  Game.new("paper", params[:option2])
+  Game.new(params[:option1], params[:option2])
   @result = game.play_game()
   erb(:result)
 end
