@@ -3,41 +3,26 @@ class Game
 
   attr_accessor :option1, :option2
 
-  def initialize(option1, option2)
-    @option1 = nil
-    @option2 = option2
+  def initialize(option2)
+    @win_order = {
+      rock: :scissors,
+      scissors: :paper,
+      paper: :rock
+    }
+    @all_moves = @win_order.keys()
+    @option1 = @all_moves.sample()
+    @option2 = option2.to_sym
   end
-
-  def make_choice()
-    num = rand(1..3)
-    return "rock" if num == 1
-    return "paper" if num == 2
-    return "scissors" if num == 3
-  end
-
 
   def play_game()
-    @option1 = make_choice()
-    case
-    when @option1 == "rock"
-      return "Computer wins by playing Rock" if @option2 == "scissors"
-      return "You win by playing Paper" if @option2 == "paper"
-      return "You both picked the same weapon, please try again" if @option2 == "rock"
-    when @option1 == "scissors"
-      return "Computer wins by playing Scissors" if @option2 == "paper"
-      return "You win by playing Rock" if @option2 == "rock"
-      return "You both picked the same weapon, please try again" if @option2 == "scissors"
-    when @option1 == "paper"
-      return "Computer wins by playing Paper" if @option2 == "rock"
-      return "You win by playing Scissors" if @option2 == "scissors"
-      return "You both picked the same weapon, please try again" if @option2 == "paper"
+    if @option1 == @option2
+      return "it's a draw!"
+    elsif @win_order[@option2] == @option1
+      return "You win with #{@option2}"
+    elsif @win_order[@option1] == @option2
+      return "Computer wins with #{@option1}"
     end
   end
-
-
-
-
-
 
 
 end
